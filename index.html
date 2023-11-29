@@ -14,6 +14,7 @@
             nav {
                 backdrop-filter: blur(0.5rem);
             }
+
             #foto {
                 background: transparent url("https://picsum.photos/id/121/800/600?blur=8") 0 0 no-repeat;
                 background-size: cover;
@@ -46,7 +47,7 @@
         <header class="vh-100" id="foto">
             <div class="position-absolute top-50 start-50 translate-middle w-50">
                 <p class="fs-4">
-                    El diseño para mí es...<a href="#lasEspecialidades" class="link-dark">especializada en diseño digital, editorial y de servicios</a>.
+                    El diseño para mí es lo que nos ayuda a conectar. Entender a los usuarios es conectar con ellos y permitirles conectar con otros.<a href="#lasEspecialidades" class="link-dark"> Especializada en diseño digital, editorial y de servicios</a>.
                 </p>
             </div>
         </header>
@@ -101,25 +102,26 @@
         <!--Sección de #losTrabajos-->        
         <section class="border-top border-bottom" id="losTrabajos">
             <div class="container py-5">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="trabajos">
-                   <div class="modal" id="mimodal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header"> 
-                <h2 class="modal-title"> Título del trabajo </h2>
-            </div>
-            <div class="modal-body">
-                <div class="container my-5 pt-5">
-                <div class="row row-cols-1 row-cols-lg-2 g-4" id="trabajosmodal"></div>
-            </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="mimodal">Cerrar</button>
-            </div>
-        </div>
-    </div>
-</div>
-                </div>
+                <div class="modal fade" id="modalcito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                         <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                         <div class="modal-body">
+                            <!-- Detalles del trabajo -->
+                            <div id="detalles-trabajos">
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="trabajos"></div>
             </div>
         </section>
         <!--Sección de #lasOpiniones-->        
@@ -134,22 +136,22 @@
                         <!-- Primer comentario-->
                         <div class="card mb-4 shadow-sm">
                             <div class="card-body p-4">
-                                <p class="mb-1">😁 Muy contento y satisfecho con mis resultados, denle el título.</p>
-                                <div class="small text-muted text-end">— Mario Ubilla</div>
+                                <p class="mb-1">😁 Los resultados obtenidos aportan a lo largo del desarrollo de cada encargo.</p>
+                                <div class="small text-muted text-end">— Andrés Villela</div>
                             </div>
                         </div>
                         <!-- Segundo comentario-->
                         <div class="card mb-4 shadow-sm">
                             <div class="card-body p-4">
-                                <p class="mb-1">🤯 Sin palabras.</p>
-                                <div class="small text-muted text-end">— Andrés Villela</div>
+                                <p class="mb-1">🤯 Buena aproximación al proceso de diseño y conceptualización en base a observaciones.</p>
+                                <div class="small text-muted text-end">— Emil Gatica </div>
                             </div>
                         </div>
                         <!-- Tercer comentario-->
                         <div class="card mb-4 shadow-sm">
                             <div class="card-body p-4">
                                 <p class="mb-1">😌 Grata experiencia de trabajo y resultados acordes.</p>
-                                <div class="small text-muted text-end">— Daniel Rojas</div>
+                                <div class="small text-muted text-end">— Dusan Ivelic</div>
                             </div>
                         </div>
                         <!-- Listo, no más comentarios-->
@@ -197,27 +199,63 @@
         </footer>
         <!-- Lo que sigue es JavaScript a secas-->
         <script>
-            async function portfolio() {
-                const consulta = await fetch("https://raw.githubusercontent.com/Kasu-exe/DNM-11/main/datos");
-                const data = await consulta.json();
-                var donde = document.querySelector("#trabajos");
-                data.forEach(function (t, i) {
-    donde.innerHTML += `<article class="col"><div class="card h-100 shadow-sm ${t.soporte}"><img src="${t.fotos[0]}" class="card-img-top"><div class="card-body"><h3 class="fs-5"><a href="second_html_file.html?nro=${i}" class="link-secondary">Abrir Modal</a></h3><p>${t.abstract}</p><small>#${t.soporte}</small></div></div></article>`;
-});
+  async function portfolio() {
+    const consulta = await fetch("https://raw.githubusercontent.com/Kasu-exe/DNM-12/main/datos.json");
+    const data = await consulta.json();
+    var donde = document.querySelector("#trabajos");
 
-                 // Agregar listeners para abrir los modales
-        data.forEach(function (t, i) {
-            const abrirModalBtn = document.getElementById(`abrirModal${i}`);
-            abrirModalBtn.addEventListener('click', function() {
-                const miModal = new bootstrap.Modal(document.getElementById("mimodal"));
-                miModal.show();
-            });
-            });
-            }
-            portfolio().catch((error) => console.error(error));
-        </script>
+    data.forEach(function (t, i) {
+      // Agrega un enlace que utiliza Bootstrap para abrir el modal al hacer clic en el nombre del trabajo
+      donde.innerHTML += `<article class="col"><div class="card h-100 shadow-sm ${t.soporte}">
+          <img src="${t.fotos[0]}" class="card-img-top">
+          <div class="card-body">
+            <h3 class="fs-5">
+              <a href="javascript:void(0);" class="link-secondary" data-bs-toggle="modal" data-bs-target="#modalcito" data-trabajo="${i}">${t.nombre}</a>
+            </h3>
+            <p>${t.abstract}</p>
+            <small>#${t.soporte}</small>
+          </div>
+      </div></article>`;
+    });
 
+    // Agrega un evento click a los enlaces para abrir el modal
+    document.querySelectorAll('[data-bs-toggle="modal"]').forEach((element) => {
+      element.addEventListener("click", (event) => {
+        const trabajoId = parseInt(event.target.getAttribute("data-trabajo"));
+        mostrarDetallesDelTrabajo(trabajoId);
+      });
+    });
+  }
+  portfolio().catch((error) => console.error(error));
 
+  // Función para cargar y mostrar los detalles del trabajo en el modal
+  function mostrarDetallesDelTrabajo(trabajoId) {
+    // Realiza la solicitud HTTP para obtener los datos del JSON
+    fetch("https://raw.githubusercontent.com/Kasu-exe/DNM-12/main/datos.json")
+      .then((response) => response.json())
+      .then((data) => {
+        // Accede a los detalles del trabajo específico
+        const trabajo = data[trabajoId];
+
+        // Llena el contenido del modal con los detalles del trabajo
+        const modalContent = document.getElementById("detalles-trabajos");
+        modalContent.innerHTML = `
+          <h2 class="fs-1">${trabajo.nombre}</h2>
+          <p>${trabajo.texto}</p>
+          <small>#${trabajo.soporte}</small>
+          <div class="row">
+            ${trabajo.fotos
+              .map((foto) => `<div class="col"><img src="${foto}" class="w-100 rounded shadow-sm"></div>`)
+              .join("")}
+          </div>
+        `;
+
+        // Abre el modal
+        $('#modalcito').modal('show');
+      })
+      .catch((error) => console.error(error));
+  }
+</script>
         <!-- Lo que sigue es la biblioteca de Bootstrap-->
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>

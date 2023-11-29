@@ -1,0 +1,59 @@
+[
+    {
+        "nombre": "Aguas Maule",
+        "fotos": ["https://raw.githubusercontent.com/Kasu-exe/DNM-12/main/img/aguas_maule.webp", "https://picsum.photos/id/252/500/310", "https://picsum.photos/id/252/500/310"],
+        "soporte": "Servicios",
+        "abstract": "Portal interactivo - Examen Calidad I",
+        "texto": "Se trabajó, en conjunto con Balloon Latam a través de Puentes UC, en torno a la problemática de la escasez hídrica en el Maule, en donde se levantó información en terreno para luego llegar a procesos de co-creación en conjunto con los líderes territoriales de la zona. Se diseñaron estas dinámicas en base a la facilitación en Diseño de servicios. La interpretación de los resultados de estas sesiones culminaron en la ideación de un portal web interactivo que facilite el acceso a la información respecto a la captación, reutilización y cuidado del agua."
+    },
+    {
+        "nombre": "Dulces a la vista",
+        "fotos": ["https://raw.githubusercontent.com/Kasu-exe/DNM-12/main/img/dulcesalavista.webp", "https://picsum.photos/id/3/500/310", "https://picsum.photos/id/3/500/310"],
+        "soporte": "Servicios",
+        "abstract": "Colaboración con INAPI - Calidad I",
+        "texto": "En colaboración con INAPI, para su programa de Sello de Origen, se trabajó con el Sello de denominación geográfica que poseen los Dulces de la Ligua. Se recurrió a la investigación de contexto, entrevistas y salidas a terreno para levantar observaciones, las que permitieron llevar a cabo el proceso de Diseño. El proyectó se construyó en torno a la idea de mantener la tradición dulcera dentro de la zona e impulsar la identidad de la ciudad para ser percibida como un destino de mayor interés turístico, con foco en el potencial visual que podrían tener las casas de elaboración."
+    },
+    {
+        "nombre": "Publicación cuentos zen",
+        "fotos": ["https://raw.githubusercontent.com/Kasu-exe/DNM-12/main/img/cuentos.webp", "https://picsum.photos/id/464/500/310", "https://picsum.photos/id/464/500/310"],
+        "soporte": "Editorial",
+        "abstract": "Publicación conceptual - Calidad II",
+        "texto": "Se llega a la formalización de una publicación del libro Los más bellos cuentos zen, de Henri Brunel, que logre responder a un concepto acorde a la filosofía zen. Se trabaja levantando observaciones en base a premisas, desde donde emergen conceptos claves para guiar el proceso de Diseño. En este caso el concepto elegido fue el del intangible. Se trabaja con maquetación de texto, ilustraciones en torno a el mismo como imagen, diseño de portada, portadilla, créditos y finalmente encuadernación de acuerdo a la técnica japonesa, que refuerza el concepto."
+    },
+    {
+        "nombre": "Manual Gráfico",
+        "fotos": ["https://raw.githubusercontent.com/Kasu-exe/DNM-12/main/img/manual.webp", "https://picsum.photos/id/39/500/310", "https://picsum.photos/id/39/500/310"],
+        "soporte": "Editorial",
+        "abstract": "Entregable físico - Calidad II",
+        "texto": "Se resuelve como entregable físico un Manual de recursos gráficos para facilitar la implementación del programa identitario Dulces a la Vista, en donde se expone información de los detalles del programa, recomendaciones gráficas, y distinción de distintos niveles de intervención en las casas de elaboración con el fin de que los maestros dulceros cuenten con las herramientas necesarias para aplicar la identidad visual que se propone, aclarando que se permite la individualidad de cada casa tradicional, pero implementando un nivel de cohesión y atractivo para quienes quieran visitar las fábricas dulceras."
+    },
+    {
+        "nombre": "Perrololein",
+        "fotos": ["https://raw.githubusercontent.com/Kasu-exe/DNM-12/main/img/Perrololein.webp", "https://picsum.photos/id/39/500/310", "https://picsum.photos/id/39/500/310"],
+        "soporte": "Digital",
+        "abstract": "Campaña para Ecoparque Peñalolén - Producto",
+        "texto": "En conjunto con la dirección de Medioambiente de la Municipalidad de Peñalolén, se encarga una campaña informativa para la tenencia responsable de mascotas. En base a la investigación emerge la idea de una web-serie a través de redes sociales, para fomentar la participación de niños y adolescentes, quienes más interactúan con este medio. Se realiza diseño de personajes, incluyendo turn-arounds, fichas de lip-sync y lo necesario para continuar el proyecto de ser adoptado por la Municipalidad, que se concreta a través de un capítulo piloto donde se destaca la importancia del baño en las mascotas."
+    },
+    {
+        "nombre": "Dobles páginas",
+        "fotos": ["https://raw.githubusercontent.com/Kasu-exe/DNM-12/main/img/Doblepagina.webp", "https://picsum.photos/id/39/500/310", "https://picsum.photos/id/39/500/310"],
+        "soporte": "Editorial",
+        "abstract": "Diseño de doble página - NGNF",
+        "texto": "Para el curso de Narración Gráfica de No Ficción, se encarga realizar dobles páginas que sirvan para comunicar temas relevantes de una exposición del centro de Extensión UC, ubicado en casa central. En esta oportunidad se destacan los patrones de rojo y dorado de la exposición mencionada, además de los minerales usados para su confección. Se redacta contenido en base a investigación acerca de los significados del uso de estos pigmentos en la época, para posteriormente diagramar la información de una manera acorde a la estética museográfica."
+    },
+    {
+        "nombre": "Infografía - Taller Interacción",
+        "fotos": ["https://raw.githubusercontent.com/Kasu-exe/DNM-12/main/img/Infografia.webp", "https://picsum.photos/id/39/500/310", "https://picsum.photos/id/39/500/310"],
+        "soporte": "Digital",
+        "abstract": "Diseño de organismo verosímil - Interacción",
+        "texto": "Se encarga la creación de un organismo verosímil que habite en medios de transporte. Partiendo de una investigación de distintos insectos, se llega a la idea de una Hoja que coma insectos muertos una vez chocan contra los parabrisas de los autos. En la infografía es apreciable aspectos como su reproducción, sistema digestivo, migración, tamaño, peso y condiciones de hábitat adecuadas. Es utilizada una paleta de colores legible en donde el punto focal es el organismo, el cual se interviene gráficamente para otorgar más información de su anatomía y particularidades."
+    },
+    {
+        "nombre": "Afiches",
+        "fotos": ["https://raw.githubusercontent.com/Kasu-exe/DNM-12/main/img/Afiches.webp", "https://picsum.photos/id/39/500/310", "https://picsum.photos/id/39/500/310"],
+        "soporte": "Digital",
+        "abstract": "Compilación de Afiches",
+        "texto": "Afiches realizados para los cursos de Programación Creativa y Lenguaje Visual. En ambos se toma como requerimiento el uso de imagen y texto, siendo el primero de temática libre y el segundo correspondiente a un cortometraje ganador del premio Óscar. En el caso del primero, se idea en torno a la flor de nomeolvides, a los ecos que generan los recuerdos en la memoria. En el caso del segundo, se conceptualiza el cortometraje como una panorámica general del amor y las conexiones fragmentadas que formamos, que existen en momentos fugaces como el movimiento de un parabrisas."
+    }
+
+]
