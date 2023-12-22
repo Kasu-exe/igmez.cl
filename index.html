@@ -2,129 +2,32 @@
 <html lang="es">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <!--En la siguiente línea voy por el estilo CSS que ofrece Bootstrap-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    </head>
-        <!--estilo CSS al que puede conmplementar o contradecir-->
-        <style>
-            section {
-                scroll-margin-top: 50px;
-            }
-            body {
-                font-family: Alegreya Sans; 
-                font-weight: 400; 
-                word-wrap: break-word;
-                width: 100%; 
-                height: 100%; 
-                position: relative; 
-                background: linear-gradient(180deg, #FAF6FE 0%, #C7B0D8 100%)            
-            }
-            nav {
-                backdrop-filter: blur(0.5rem);
-            }
-      
-            footer{
-                background: #A67788;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css" />
         <title>Isidora Gómez</title>
     </head>
     <body>
-        <!--Barra de navegación fija al tope-->
-        <nav class="navbar fixed-top navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Isidora Gómez</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarMenu">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#lasEspecialidades">Especialidades</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#losTrabajos">Trabajos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#lasOpiniones">Opiniones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#losContactos">Contactos</a></li>
-                    </ul>
-                </div>
+        <nav>
+            <h1><a href="index.html">ISIDORA GÓMEZ - PORTFOLIO</a></h1>
+            <div class="topnav"> 
+                <a href="#news">TRABAJOS</a>
+                <a href="#contact">CONTACTO</a>
+                <a href="#about">MÁS SOBRE MÍ</a>
             </div>
         </nav>
-        <!--Encabezado-->        
-           <div className="text-violet-950 text-opacity-90 text-8xl leading-[79px] tracking-tighter max-md:max-w-full max-md:text-4xl max-md:leading-9 max-md:mt-10">
-      Hola! soy Isidora, estudiante de Diseño Integral
-       </div>
-        <!--Los símbolos en este SVG escondido serán reutilizados más abajo-->
-        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-            <symbol id="window" viewBox="0 0 16 16">
-                 <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
-                 <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v2H1V3a1 1 0 0 1 1-1h12zM1 13V6h4v8H2a1 1 0 0 1-1-1zm5 1V6h9v7a1 1 0 0 1-1 1H6z"/>
-            </symbol>
-            <symbol id="bookmark" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/>
-                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-            </symbol>
-            <symbol id="gear" viewBox="0 0 16 16">
-                 <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-                 <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
-            </symbol>
-        </svg>
-            <symbol id="Servicio" viewBox="0 0 16 16">
-                <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
-                <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
-            </symbol>
-        </symbol>
-        <!--Sección de #lasEspecialidades-->        
-        <section class="bg-light" id="lasEspecialidades">
-            <div class="container py-5">
-                <div class="row gx-5">
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h2 class="h4 fw-bolder">
-                            <svg class="me-1 mb-1" width="1em" height="1em" fill="#FF69B4"><use href="#window"></use></svg> Digital
-                        </h2>
-                        <p>Enfoque en transformar conceptos en experiencias visuales efectivas, que comuniquen y complementen.</p>
-                        <small>#Digital</small>
-                    </div>
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h2 class="h4 fw-bolder">
-                            <svg class="me-1 mb-1" width="1em" height="1em" fill="#FF69B4"><use href="#bookmark"></use></svg> Editorial
-                        </h2>
-                        <p>Encontrando un equilibrio entre creatividad y estructura para crear revistas, libros y proyectos impresos</p>
-                        <small>#Editorial</small>
-                    </div>
-                    <div class="col-lg-4">
-                        <h2 class="h4 fw-bolder">
-                            <svg class="me-1 mb-1" width="1em" height="1em" fill="#FF69B4"><use href="#gear"></use></svg> Servicios
-                        </h2>
-                        <p>Área en donde se combina estrategia y empatía para crear experiencias únicas.</p>
-                        <small>#Servicios</small>
-                    </div>
-                </div>
-            </div>
+        <section style="min-height: 80vh;">
+            <blockquote class="index"></blockquote>
         </section>
-        <!--Sección de #losTrabajos-->        
-        <section class="border-top border-bottom" id="losTrabajos">
-            <div class="container py-5">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="trabajos"></div>
-            </div>
-        </section>
-        <!-- El pie de página-->
-        <footer class="py-4 text-white">
-            <div class="container px-5"><p class="text-center small">Isidora Gómez &copy; 2023</p></div>
+
+        <footer>
+            <div><p>Isidora Gómez &copy; 2023</p></div>
         </footer>
-        <!-- Lo que sigue es JavaScript a secas-->
         <script>
-            async function portfolio() {
-                const consulta = await fetch("https://raw.githubusercontent.com/Kasu-exe/DNM-12/main/datos.json");
-                const data = await consulta.json();
-                var donde = document.querySelector("#trabajos");
-                data.forEach(function (t, i) {
-                    donde.innerHTML += `<article class="col"><div class="card h-100 shadow-sm ${t.soporte}"><img src="${t.fotos[0]}" class="card-img-top"><div class="card-body"><h3 class="fs-5"><a href="single.html?nro=${i}" class="link-secondary">${t.nombre}</a></h3><p>${t.abstract}</p><small>#${t.soporte}</small></div></div></article>`;
-                });
-            }
-            portfolio().catch((error) => console.error(error));
+            var blockquote = document.querySelector("blockquote");
+                 blockquote.innerHTML = 'Hola! soy isidora, estudiante de diseño integral.';
+
         </script>
-        <!-- Lo que sigue es la biblioteca de Bootstrap-->
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>
