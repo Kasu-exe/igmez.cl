@@ -5,29 +5,223 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css" />
         <title>Isidora Gómez</title>
     </head>
     <body>
+
+        <!-- Barra de Navegación -->
         <nav>
-            <h1><a href="index.html">ISIDORA GÓMEZ - PORTFOLIO</a></h1>
-            <div class="topnav"> 
-                <a href="#news">TRABAJOS</a>
-                <a href="#contact">CONTACTO</a>
-                <a href="#about">MÁS SOBRE MÍ</a>
+            <h1>isidora gómez - portafolio</h1>
+            <div>
+                <button>Proyectos</button>
+                <button>Contacto</button>
+                <a href="aboutme.html"><button>Más sobre mí</button></a>
             </div>
+            
         </nav>
-        <section style="min-height: 80vh;">
-            <blockquote class="index"></blockquote>
+    
+        <!-- Landing Page -->
+        <section class="landing-page">
+            <div class="flex-container">
+                <div class="left-div">
+                    <h2>Hola! me llamo isi, soy estudiante de diseño integral.</h2>
+                </div>
+                <div class="right-div">
+                    <h5>Me apasiona explorar cómo creatividad y estrategia convergen, es por eso que mi enfoque está en el área de Diseño Estratégico de Productos y Servicios.</h2>
+                    <button class="action">→ hablemos :)</button>
+                    </div>
+            </div>
         </section>
+        <div class="Mis-Proyectos"> mis proyectos </div>
 
+        <!-- Trabajos -->
+        <section id="proyectos">
+
+        <div class="trabajos">
+            <div class="trabajos-text">
+                <h6>Diseño Estratégico - Servicios</h6>
+                <h3>Dulces a la vista</h3>
+                <p>Programa de intervención para casas de fabricación de dulces de la Ligua, en conjunto con INAPI.</p>
+                <button class="mas" data-modal="modalDulces"> → más sobre el proyecto </button>
+            </div>
+            <div class="trabajos-Img">
+                <img src="Dulces.jpg" alt="Descripción de la imagen">
+            </div>
+        </div>
+        
+        <div class="trabajos">
+            <div class="trabajos-text">
+                <h6>Diseño Estratégico - Servicios</h6>
+                <h3>Aguas Maule</h3>
+                <p>Sistema de información creado para combatir la crisis climática de la Región del Maule, en conjunto con Balloon Latam.</p>
+                <button class="mas" data-modal="modalAguas"> → más sobre el proyecto </button>
+            </div>
+            <div class="trabajos-Img">
+                <img src="Aguas.jpg" alt="Descripción de la imagen">
+            </div>
+        </div>
+
+        <div class="trabajos">
+            <div class="trabajos-text">
+                <h6>Diseño Editorial</h6>
+                <h3>Publicación STEM</h3>
+                <p>Colección de biografías para inspirar a niñas sobre la Ciencia, Tecnología, Ingeniería y Matemáticas en Chile.</p>
+                <button class="mas" data-modal="modalStem"> → más sobre el proyecto </button>
+            </div>
+            <div class="trabajos-Img">
+                <img src="STEM.jpg" alt="Descripción de la imagen">
+            </div>
+        </div>
+
+        <div class="trabajos">
+            <div class="trabajos-text">
+                <h6>Diseño Estratégico - Producto</h6>
+                <h3>bleem</h3>
+                <p>Diseño para no-humanos. Punto de polinización de rosales para abejas del Parque Araucano, hecho con fabricación digital.</p>
+                <button class="mas" data-modal="modalBleem"> → más sobre el proyecto </button>
+            </div>
+            <div class="trabajos-Img">
+                <img src="BLEEM.jpg" alt="Descripción de la imagen">
+            </div>
+        </div>
+
+        <!-- Modales para proyectos -->
+<div id="modalDulces" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal('modalDulces')">&times;</span>
+        <div class="gallery">
+            <img src="Dulces1.jpg" alt="Descripción de la imagen 1">
+            <img src="Dulces2.jpg" alt="Descripción de la imagen 2">
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+        <div class="text">
+            <h3>Dulces a la vista</h3>
+            <p>Programa de intervención para casas de fabricación de dulces de La Ligua, en conjunto con INAPI.</p>
+            <!-- Agrega más contenido según sea necesario -->
+        </div>
+    </div>
+</div>
+
+<div id="modalAguas" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal('modalAguas')">&times;</span>
+        <div class="gallery">
+            <img src="Dulces1.jpg" alt="Descripción de la imagen 1">
+            <img src="Dulces2.jpg" alt="Descripción de la imagen 2">
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+        <div class="text">
+            <h3>Aguas Maule</h3>
+            <p>Programa de intervención para casas de fabricación de dulces de La Ligua, en conjunto con INAPI.</p>
+            <!-- Agrega más contenido según sea necesario -->
+        </div>
+    </div>
+</div>
+
+<div id="modalStem" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal('modalStem')">&times;</span>
+        <div class="gallery">
+            <img src="Dulces1.jpg" alt="Descripción de la imagen 1">
+            <img src="Dulces2.jpg" alt="Descripción de la imagen 2">
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+        <div class="text">
+            <h3>Publicación Stem</h3>
+            <p>Programa de intervención para casas de fabricación de dulces de La Ligua, en conjunto con INAPI.</p>
+            <!-- Agrega más contenido según sea necesario -->
+        </div>
+    </div>
+</div>
+
+<div id="modalBleem" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal('modalBleem')">&times;</span>
+        <div class="gallery">
+            <img src="Dulces1.jpg" alt="Descripción de la imagen 1">
+            <img src="Dulces2.jpg" alt="Descripción de la imagen 2">
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+        <div class="text">
+            <h3>Bleem</h3>
+            <p>Sitio de amparo para abejas y rosales.</p>
+            <!-- Agrega más contenido según sea necesario -->
+        </div>
+    </div>
+</div>
+
+        </section>
+    
+    
         <footer>
-            <div><p>Isidora Gómez &copy; 2023</p></div>
+            <div>
+                <p>Isidora Gómez &copy; 2023</p>
+            </div>
         </footer>
-        <script>
-            var blockquote = document.querySelector("blockquote");
-                 blockquote.innerHTML = 'Hola! soy isidora, estudiante de diseño integral.';
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script> 
 
-        </script>
+        <script>document.addEventListener("DOMContentLoaded", function () {
+            const trabajos = document.querySelectorAll('.trabajos');
+        
+            trabajos.forEach((trabajo) => {
+                let trabajostext = trabajo.querySelector('.trabajos-text');
+                let trabajosimg = trabajo.querySelector('.trabajos-Img');
+        
+                gsap.set(trabajostext, {
+                    xPercent: -100,
+                    opacity: 0
+                });
+        
+                gsap.set(trabajosimg, {
+                    xPercent: 70,
+                    opacity: 0
+                });
+        
+                gsap.to(trabajostext, {
+                    scrollTrigger: {
+                        trigger: trabajo,
+                        start: 'top 100%',
+                        end: 'top 20%',
+                        scrub: true,
+                    },
+                    xPercent: 0,
+                    opacity: 1
+                });
+        
+                gsap.to(trabajosimg, {
+                    scrollTrigger: {
+                        trigger: trabajo,
+                        start: 'top 100%',
+                        end: 'top 20%',
+                        scrub: true,
+                    },
+                    xPercent: -5,
+                    opacity: 1
+                });
+        
+                // Agrega un event listener para abrir el modal al hacer clic en el botón "mas"
+                const masBtn = trabajo.querySelector('.mas');
+                masBtn.addEventListener('click', function () {
+                    abrirModal(masBtn.getAttribute('data-modal'));
+                });
+            });
+        });
+        
+        // Función para abrir el modal
+        function abrirModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'block';
+        }
+        
+        // Función para cerrar el modal
+        function cerrarModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'none';
+        }</script>
     </body>
-</html>
+    </html>

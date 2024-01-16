@@ -1,329 +1,402 @@
-*,
-*:after,
-*:before {
+/* Reset de márgenes y rellenos */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-:root {
-    /* NO CAMBIE LOS TAMAÑOS DE LAS FUENTES */
-    --texto-grande: calc(1.6rem + 2vw);
-    --texto-mediano: calc(0.8rem + 0.8vw);
-    --icono-mediano: calc(0.8rem + 0.4vw);
-    --texto-normal: calc(1rem - 0.2vw);
-    /* SI PUEDE CAMBIAR COLORES  */
-    --lightness-10: rgba(0, 0, 0, 0.7);
-    --lightness-20: rgba(0, 0, 0, 0.6);
-    --lightness-30: rgba(0, 0, 0, 0.5);
-    --lightness-40: rgba(0, 0, 0, 0.4);
-    --lightness-50: rgba(0, 0, 0, 0.3);
-    --ligthness-60: rgba(0, 0, 0, 0.2);
-    --lightness-70: rgba(0, 0, 0, 0.1);
-    --lightness-80: rgba(255, 255, 255, 0.7);
-    --lightness-90: rgba(255, 255, 255, 0.8);
-}
-
-html,
+/* Estilos generales */
 body {
-    min-height: 100%;
-}
-
-body {
-    font-weight: 400;
     font-family: 'Alegreya Sans SC';
-    font-size: 22px;
-    font-size: var(--texto-normal);
     background: linear-gradient(180deg, #FAF6FE 0%, #C7B0D8 100%);
-    overflow-x: hidden;
+    color: #2f1696;
+    position: relative;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
+.flex-container {
+    display: flex;
+    position: relative;
+    top: 12vh;
+}
+
+.left-div, .right-div {
+    display: inline-flex;
+    height: 257px;
+    flex-shrink: 0;
+}
+
+.left-div {
+    padding: 5% 0 5% 5%;
+    justify-content: flex-end;
+}
+
+.right-div {
+    flex-direction: column;
+    padding: 7.5% 5% 1% 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4%;
+    position: relative;
+    top: 0; /* Ajusta según sea necesario */
+}
+
+.Presentación
+{
+    position: absolute;
+    margin-left: 50%;
+
+/* Ajusta según sea necesario */
+}
+
+h4{
+    width: 34vw;
+    color: #1c1c96;
+    font-family: 'Alegreya Sans SC';
     font-weight: 400;
+    font-size: 3.25vw;
+    letter-spacing: -1.50px;
+    word-wrap: break-word;
+    margin-top: 10vh;
+    margin-left: 2.5vw;
+    margin-bottom: 0.9vw;
+    line-height: 99.313%;
+
 }
 
-a {
-    color: var(--lightness-20);
-    text-decoration: none;
+.Interes{
+    text-align: left;
+    font-size: 1vw;
+    width: 33vw;
+    padding: 0.5% 5% 1% 8%;
+    position: relative; /* Ajusta según sea necesario */
 }
 
-a:is(:hover, :focus) {
-    color: var(--lightness-10);
-    text-decoration: underline;
+.presentacion-Img {
+    background-color: transparent;
+    width: 22vw;
+    height: 65vh;
+    border: 1px solid #0A3980;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0.5vw; /* Ajusta según sea necesario */
+    position: absolute;
+    margin-left: -20vw;
+    z-index: -1;
+    /* Ajusta según sea necesario */
 }
 
-h1 {
-    color: rgba(28, 1, 138, 0.94);
-    text-align: center;
-    font-family: Alegreya Sans SC;
-    font-size: 1rem;
+.presentacion-Img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    padding: 0.5vw;
+    box-sizing: border-box;
+}
+
+
+.Mis-Proyectos {
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 2vw; /* Ajusta según sea necesario */
+    letter-spacing: 1.1px;
+    padding: 10% 0 10% 5%; /* Ajusta según sea necesario */
+}
+
+nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    margin-right: 1vw; /* Ajusta según sea necesario */
+    cursor: pointer;
+    color: #623df8ce;
+    font-family: 'Alegreya Sans SC';
+    font-size: 1.5vw; /* Ajusta según sea necesario */
     font-style: normal;
-    font-weight: 550;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: 1.1px;
     text-transform: lowercase;
 }
 
-h2 {
-    font-size: var(--texto-grande);
-    margin: 1.5vh 0 6vh 0;
+.action {
+    color: #4426bdce;
+    font-family: 'Alegreya Sans SC';
+    font-size: 2vw; /* Ajusta según sea necesario */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    padding: 1.5% 2%; /* Ajusta según sea necesario */
+    border-radius: 2vw; /* Ajusta según sea necesario */
+    border: 1px solid #1c1c96;
 }
 
-p {
-    line-height: 1.4;
-    margin: 0;
+.mas {
+    font-size: 1.5vw; /* Ajusta según sea necesario */
+    letter-spacing: 0.72px;
+    margin-top: 3%;
+    padding: 1.5% 2%; /* Ajusta según sea necesario */
+    border-radius: 2vw; /* Ajusta según sea necesario */
+    border: 1px solid #623df8ce;
+}
+
+h1, h5 {
+    color: #623df8ce;
+    font-family: 'Alegreya Sans SC';
+    font-size: 1.5vw; /* Ajusta según sea necesario */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.1px;
+}
+
+/* Estilos de la landing page */
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
     padding: 0;
 }
 
-em {
-    font-weight: bold;
-    font-style: normal;
+.trabajos {
+    display: flex;
+    width: 100%;
+    height: 200vh;
+    padding: 0;
 }
 
-nav,
-footer {
-    width: 89vw;
-    padding: 0 5.5vw;
+/* Otros estilos y media queries... */
+@media (max-width: 768px) {
+    /* Ajustes para pantallas más pequeñas */
+    h1, h5, h2 {
+        font-size: 4vw; /* Ajusta según sea necesario */
+    }
+    .Mis-Proyectos {
+        padding: 10% 0 10% 3%; /* Ajusta según sea necesario */
+    }
+    /* Agrega más ajustes según sea necesario */
+}
+
+.Mis-Proyectos {
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 2vw;
+    letter-spacing: 1.1px;
+    padding: 10% 0 10% 5%;
+}
+
+.landing-page {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
+    height: 70vh;
+    padding: 0;
 }
 
-nav {
-    color: rgba(28, 1, 138, 0.94);
-    text-align: center;
-    font-family: Alegreya Sans SC;
-    font-size: 1rem;
+/* Hola! Me llamo Isi*/
+h2 {
+    width: 40vw;
+    color: #1c1c96;
+    font-family: 'Alegreya Sans SC';
+    font-weight: 300;
+    font-size: 5.25vw;
+    letter-spacing: -1.50px;
+    word-wrap: break-word;
+    margin-bottom: 2vw;
+}
+
+/* Me apasiona...*/
+h5 {
+    font-family: 'Alegreya Sans';
+    width: 35vw;
+    color: #4426bdce;
+    font-size: 1.85vw;
+    letter-spacing: 0.84px;
+    margin-bottom: 2vw;
+}
+
+.trabajos {
+    display: flex;
+    width: 100%;
+    height: 200vh;
+    padding: 0;
+}
+
+#proyectos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.trabajos-text {
+    display: inline-flex;
+    flex-direction: column;
+    width: 80vw; /* Ajusta según sea necesario */
+    height: 50vh; /* Ajusta según sea necesario */
+    padding: 10% 0.093px 5% 0;
+    align-items: center;
+    gap: 5px;
+    letter-spacing: 1.1px;
+}
+
+.trabajos-Img {
+    background-color: transparent;
+    width: 65vw;
+    height: 65vh;
+    margin-left: auto;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0A3980;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 1vw; /* Ajusta según sea necesario */
+    position: relative;
+    top: -1vw; /* Ajusta según sea necesario */
+}
+
+.trabajos-Img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    padding: 0.5vw;
+    box-sizing: border-box;
+}
+
+/*img {
+    padding: 1vw 1vh;
+    max-width: 60vw;
+    height: 60vh;
+    display: block;
+}*/
+
+h3 {
+    font-size: 2vw;
     font-style: normal;
-    font-weight: 550;
+    font-weight: 600;
     line-height: normal;
-    letter-spacing: 0.5px;
-    text-transform: lowercase;
 }
 
-footer {
-    min-height: 8vh;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
-
-nav > select {
-    padding: 0.5rem 0.7rem;
-    color: var(--lightness-10);
-    background: var(--lightness-70);
-    border: none;
-    border-radius: 0.4rem;
-    letter-spacing: 0.05rem;
-}
-
-nav > button {
-    font-weight: bold;
-    padding: 0.5rem 0.7rem;
-    color: var(--lightness-80);
-    background: var(--lightness-10)
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="white"><path d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/></svg>')
-        0.5rem center no-repeat;
-    border: none;
-    border-radius: 0.4rem;
-    letter-spacing: 0.05rem;
-    width: calc(var(--texto-normal) * 15);
-    text-align: right;
-    cursor: pointer;
-}
-
-nav > button:hover {
-    color: var(--lightness-90);
-}
-
-header {
-    width: min(89vw, 450px);
-    height: auto;
-    padding: 2.5vh 5.5vw;
-    display: flex;
-    justify-content: space-between;
-}
-
-header:empty {
-    display: none;
-}
-
-header a {
-    text-decoration: underline;
-}
-
-header input {
-    font-family: Helvetica, Arial, sans-serif;
-}
-
-header input[name="ciudad"] {
-    all: unset;
-    margin-top: -0.35rem;
-    width: calc(80% - 1rem);
-    padding: 0.4rem 0.5rem 0.3rem 0.5rem;
-    border-radius: 0.25rem 0 0 0.25rem;
-    background: var(--lightness-90);
-}
-
-header input[type="button"] {
-    all: unset;
-    margin-top: -0.35rem;
-    width: calc(20% - 1rem);
-    padding: 0.4rem 0.5rem 0.3rem 0.5rem;
-    background: var(--lightness-20);
-    color: var(--lightness-80);
-    text-align: center;
-    border-radius: 0 0.25rem 0.25rem 0;
-    font-weight: bold;
-    letter-spacing: 0.05rem;
-}
-
-header input[type="button"]:hover {
-    background: var(--lightness-10);
-    color: var(--lightness-90);
-    cursor: pointer;
-}
-
-header input[type="radio"] {
-    margin-right: 0.25rem;
-    accent-color: black;
-}
-
-header input[type="date"] {
-    margin-left: 0.5rem;
-    margin-top: -0.25rem;
-    padding: 0.3rem 0.5rem 0.2rem 0.5rem;
-    border: none;
-    border-radius: 0.25rem;
-    background: white;
-}
-
-aside {
-    width: 89vw;
-    padding: 0 5.5vw;
-}
-
-aside:empty {
-    display: none;
-}
-
-aside p {
-    font-size: var(--texto-mediano);
-    line-height: 1.38;
-    margin-bottom: 3vh;
-}
-
-aside svg {
-    width: var(--icono-mediano);
-    height: var(--icono-mediano);
-}
-
-section {
-    position: absolute;
-    width: 680.92px;
-    left: 62.53px; 
-    top: 140.92px; 
-}
-
-main {
-    width: 90vw;
-    padding: 0 5vw 5vh 5vw;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* EN EL SECTION  */
-
-blockquote {
-    color: rgba(28, 1, 138, 0.94);
-    font-family: Alegreya Sans SC;
-    font-size: 82px;
+h6 {
+    font-size: 1vw;
     font-style: normal;
     font-weight: 400;
-    line-height: 70px; /* 82.292% */
-    letter-spacing: -1.92px;
+    line-height: normal;
 }
 
-blockquote.index {
-    left: 62.53px; 
-    top: 320.92px; 
-    font-family: Alegreya Sans SC;
-    line-height: 79px;
-    position: absolute
-    word-wrap
-    word-break: break-word;
-}
+p {
+    width: 25vw;
+    text-align: center;
+    font-family: 'Lato';
+    font-size: 1.5vw; /* Ajusta según sea necesario */
 }
 
-/* EN EL MAIN  */
-
-main article {
-    width: 676.92px;
-    background: var(--lightness-90);
-    margin: 0.25rem;
-    border-radius: 0.4rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: right;
-    flex-grow: 0;
-    flex-basis: calc(100% - 0.5rem);
-}
-
-@media (min-width: 767.98px) {
-    main article {
-        flex-basis: calc(50% - 0.5rem);
-    }
-}
-
-@media (min-width: 991.98px) {
-    main article {
-        flex-basis: calc(33.3% - 0.5rem);
-    }
-}
-
-@media (min-width: 1199.98px) {
-    main article {
-        flex-basis: calc(25% - 0.5rem);
-    }
-}
-
-@media (min-width: 1399.98px) {
-    main article {
-        flex-basis: calc(20% - 0.5rem);
-    }
-}
-
-main article div {
-    padding: 0.5rem;
-}
-
-main article div a {
-    text-decoration: underline;
-}
-
-main article div:first-child {
-    min-width: 4.5rem;
+/* Estilos del pie de página */
+footer {
+    background-color: transparent;
+    padding: 1%;
     text-align: center;
 }
 
-main article div:first-child h3 {
-    font-size: var(--texto-grande);
-    font-weight: lighter;
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .Mis-Proyectos {
+        padding: 10% 0 10% 3%;
+    }
+
+    h2, h3, h5 {
+        font-size: 4vw;
+    }
+
+    h6, p {
+        font-size: 1.5vw;
+    }
+
+    .trabajos-text, .trabajos-Img {
+        width: 90vw;
+    }
 }
 
-main article div:first-child img {
-    width: 4.5rem;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
 }
 
-main article div:last-child {
-    word-break: break-word;
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-main article div:last-child a {
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.gallery img {
+    width: 100px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    border: 1px solid #777;
+}
+
+.text p {
+    font-size: 16px;
+} 
+
+
+/* Lenis CSS */
+html.lenis {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
