@@ -11,6 +11,7 @@
     </head>
     <body>
 
+
         <!-- Barra de Navegación -->
         <nav>
             <h1>isidora gómez - portafolio</h1>
@@ -24,13 +25,22 @@
     
         <!-- Landing Page -->
         <section class="landing-page">
+                    <div class="gradient-bg">
+            <div class="gradients-container">
+              <div class="g1"></div>
+              <div class="g2"></div>
+              <div class="g3"></div>
+              <div class="g4"></div>
+              <div class="g5"></div>
+            </div>
+          </div>
             <div class="flex-container">
                 <div class="left-div">
                     <h2>Hola! me llamo isi, soy estudiante de diseño integral.</h2>
                 </div>
                 <div class="right-div">
                     <h5>Me apasiona explorar cómo creatividad y estrategia convergen, es por eso que mi enfoque está en el área de Diseño Estratégico de Productos y Servicios.</h2>
-                    <button class="action">→ hablemos :)</button>
+                        <button class="action" data-modal-action="modalNuevo"><span> → hablemos </span></button>
                     </div>
             </div>
         </section>
@@ -44,7 +54,7 @@
                 <h6>Diseño Estratégico - Servicios</h6>
                 <h3>Dulces a la vista</h3>
                 <p>Programa de intervención para casas de fabricación de dulces de la Ligua, en conjunto con INAPI.</p>
-                <button class="mas" data-modal="modalDulces"> → más sobre el proyecto </button>
+                <button class="mas" data-modal="modalDulces"><span> → más sobre el proyecto </span></button>
             </div>
             <div class="trabajos-Img">
                 <img src="Dulces.jpg" alt="Descripción de la imagen">
@@ -56,7 +66,7 @@
                 <h6>Diseño Estratégico - Servicios</h6>
                 <h3>Aguas Maule</h3>
                 <p>Sistema de información creado para combatir la crisis climática de la Región del Maule, en conjunto con Balloon Latam.</p>
-                <button class="mas" data-modal="modalAguas"> → más sobre el proyecto </button>
+                <button class="mas" data-modal="modalAguas"><span> → más sobre el proyecto </span></button>
             </div>
             <div class="trabajos-Img">
                 <img src="Aguas.jpg" alt="Descripción de la imagen">
@@ -81,14 +91,34 @@
                 <h6>Diseño Estratégico - Producto</h6>
                 <h3>bleem</h3>
                 <p>Diseño para no-humanos. Punto de polinización de rosales para abejas del Parque Araucano, hecho con fabricación digital.</p>
-                <button class="mas" data-modal="modalBleem"> → más sobre el proyecto </button>
+                <button class="mas" data-modal="modalBleem"><span> → más sobre el proyecto </span></button>
             </div>
             <div class="trabajos-Img">
                 <img src="BLEEM.jpg" alt="Descripción de la imagen">
             </div>
         </div>
+        
+        
+        
+        
+<!-- Modales para proyectos y modalContacto -->
+        <div id="modalNuevo" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('modalNuevo')">&times;</span>
+                <div class="gallery"><img id="me" src="me.png" alt="Descripción de la imagen"></div>
+                <img id="vector1" src="Vector 54.svg"> <img id="vector2" src="Vector 55.svg"> <img id="vector3" src="Vector 53.svg"> <img id="vector4" src="Vector 52.svg">
+                <div class="text">
+                    <div class="titulo"><h4 id="titulo">trabajemos juntos!</h4></div>
+                    <div class="escribeme"><h5 id="escribeme">Escríbeme</h5><p id="igmep">igmep@uc.cl</p></div>
+                    <div class="visitame"><h5 id="visitame">Visítame en</h5><p id="linkedin">Linkedin</p></div>
+                    <!-- Agrega más contenido según sea necesario -->
+                </div>
+                    <!--<button class="volver" onclick="cerrarModal('modalNuevo')"> ↵ volver </button>-->
+                </div>
+            </div>
+        </div>
 
-        <!-- Modales para proyectos -->
+
 <div id="modalDulces" class="modal">
     <div class="modal-content">
         <span class="close" onclick="cerrarModal('modalDulces')">&times;</span>
@@ -106,7 +136,7 @@
             <h3>plan de implementación</h3>
             <img src="DulcesImplem.png" alt="Entregable 1">
 
-            <button class="volver" onclick="cerrarModal('modalDulces')"> → volver </button>
+            <button class="volver" onclick="cerrarModal('modalDulces')"> ↵ volver </button>
             <!-- Agrega más imágenes según sea necesario -->
         </div>
     </div>
@@ -129,7 +159,7 @@
             <img src="Aguas 6.png" alt="Descripción de la imagen 2">
             <!-- Agrega más imágenes según sea necesario -->
         </div>
-        <button class="volver" onclick="cerrarModal('modalAguas')"> → volver </button>
+        <button class="volver" onclick="cerrarModal('modalAguas')"> ↵ volver </button>
     </div>
 </div>
 
@@ -137,8 +167,6 @@
     <div class="modal-content">
         <span class="close" onclick="cerrarModal('modalStem')">&times;</span>
         <div class="gallery">
-            <img src="Dulces1.jpg" alt="Descripción de la imagen 1">
-            <img src="Dulces2.jpg" alt="Descripción de la imagen 2">
             <!-- Agrega más imágenes según sea necesario -->
         </div>
         <div class="text">
@@ -164,7 +192,7 @@
             <!-- Agrega más imágenes según sea necesario -->
         </div>
         
-        <button class="volver" onclick="cerrarModal('modalBleem')"> → volver </button>
+        <button class="volver" onclick="cerrarModal('modalBleem')"> ↵ volver </button>
     </div>
 </div>
 
@@ -223,21 +251,37 @@
                 // Agrega un event listener para abrir el modal al hacer clic en el botón "mas"
                 const masBtn = trabajo.querySelector('.mas');
                 masBtn.addEventListener('click', function () {
-                    abrirModal(masBtn.getAttribute('data-modal'));
+                    console.log('Botón clicado:', masBtn);
+                    if (masBtn.classList.contains('action')) {
+                        console.log('Botón tiene clase action');
+                        abrirModal(masBtn.getAttribute('data-modal-action'));
+                    } else {
+                        console.log('Botón NO tiene clase action');
+                        abrirModal(masBtn.getAttribute('data-modal'));
+                    }
                 });
+            });
+        
+            // Agrega un event listener directo para el botón "modalNuevo"
+            const nuevoBtn = document.querySelector('.action[data-modal-action="modalNuevo"]');
+            nuevoBtn.addEventListener('click', function () {
+                abrirModal(nuevoBtn.getAttribute('data-modal-action'));
             });
         });
         
         // Función para abrir el modal
         function abrirModal(modalId) {
+            console.log('Abriendo modal:', modalId);
             const modal = document.getElementById(modalId);
             modal.style.display = 'block';
         }
         
         // Función para cerrar el modal
         function cerrarModal(modalId) {
+            console.log('Cerrando modal:', modalId); 
             const modal = document.getElementById(modalId);
             modal.style.display = 'none';
-        }</script>
+        }
+        </script>
     </body>
     </html>
