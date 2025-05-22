@@ -1,1 +1,1 @@
-# igmez.cl
+# isigomp.cl
